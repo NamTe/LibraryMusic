@@ -41,7 +41,6 @@ namespace LibraryMusic
 
     public partial class MainPage : PhoneApplicationPage
     {
-        MediaLibrary library;
         ListSong newListSong;
         DispatcherTimer timer;
         int i = 0;
@@ -49,41 +48,17 @@ namespace LibraryMusic
         {
             InitializeComponent();
 
-            library = new MediaLibrary();
+            Variable.library = new MediaLibrary();
             newListSong = new ListSong();
-            foreach (Song song in library.Songs)
+            foreach (Song song in Variable.library.Songs)
             {
                 newListSong.add(new Songs { Name = song.Name });
             }
 
             MainLongListSelector.ItemsSource = newListSong.getList();
             MainLongListSelector.Visibility = Visibility.Collapsed;
-            timer = new DispatcherTimer();
-            timer.Interval = new TimeSpan(0, 0, 1);
-            timer.Tick += new EventHandler(timer_Tick);
-            timer.Start();
+            MainLongListSelector.Visibility = Visibility.Visible;
             
-        }
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-
-                i++;
-                if (i == 5)
-                {
-                    
-                    Image.Visibility = Visibility.Collapsed;
-                    TextTitle.Text = "Media Player";
-                    TextListSong.Text = "ListSong";
-                    MainLongListSelector.Visibility = Visibility.Visible;
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
         }
 
         private void MainLongListSelector_SelectionChanged(object sender, SelectionChangedEventArgs e)

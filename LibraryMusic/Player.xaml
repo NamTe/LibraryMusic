@@ -38,14 +38,14 @@
             <Button Click="btRepeat_Click" BorderBrush="Black" Height="82" Width="120" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="336,0,0,525">
                 <Image x:Name="btRepeat" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/buttonRepeat.png" ></Image>
             </Button>
-            <Button Click="btPlay_Click" BorderBrush="Black" Height="100" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="156,0,150,10">
+            <Button Click="btPlay_Click" BorderBrush="Black" Height="100" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="156,0,150,0">
                 <Image x:Name="btPlay" VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Assets/pause.png" >
                 </Image>
             </Button>
             <Slider x:Name="slider" HorizontalAlignment="Left" Margin="10,418,0,0" VerticalAlignment="Top" Width="446"/>
 
-            <TextBlock x:Name="Current" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,451,0,130" >00:00</TextBlock>
-            <TextBlock  x:Name="Durration" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,451,9,130" >00:00</TextBlock>
+            <TextBlock x:Name="Durration" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,451,0,130" >00:00</TextBlock>
+            <TextBlock x:Name="Current"  VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,451,9,130" >00:00</TextBlock>
         </Grid>
     </Grid>
 

@@ -21,14 +21,15 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="TextTitle" Text="" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="TextListSong" Text="" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="TextTitle" Text="Music Player" Style="{StaticResource PhoneTextNormalStyle}"/>
+
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-
-            <Image x:Name="Image" Source="/Assets/1404456645_Windows_Media_Player_alt.png" Margin="0,113,0,284"></Image>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
             <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0" ItemsSource="{Binding Items}" SelectionChanged="MainLongListSelector_SelectionChanged">
                 <phone:LongListSelector.ItemTemplate>
                     <DataTemplate>
@@ -39,7 +40,6 @@
                 </phone:LongListSelector.ItemTemplate>
             </phone:LongListSelector>
         </Grid>
-
     </Grid>
 
 </phone:PhoneApplicationPage>
